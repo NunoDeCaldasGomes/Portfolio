@@ -147,9 +147,7 @@ body{
     height:300px;
   }
 }
-
-.monreseau{
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
   *,
     *::after,
     *::before {
@@ -157,14 +155,12 @@ body{
       margin: 0;
       padding: 0;
   }
+.monreseau{
   
-
-  
-
   body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    background-color: #060606;
+    background-color: #ffffff;
     display: grid;
     place-items: center;
     color: white;
@@ -265,5 +261,6 @@ body{
 }
 
 }
+
 
 

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Caldas Gomes Nuno Miguel</title>
+    <title>Portfolio — De Caldas Gomes Nuno Miguel</title>
+    <meta name="description" content="Portfolio BTS SIO SISR — Administration système, virtualisation, sécurité réseau et projets web de De Caldas Gomes Nuno Miguel.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script defer src="animation.js"></script>
@@ -15,12 +16,11 @@
             <p class="tagline">Étudiant BTS SIO — Option SISR</p>
             <nav>
                 <a href="#apropos">À propos</a>
-                <a href="#linkedin">Mes reseaux</a>
                 <a href="#projets">Projets</a>
                 <a href="#competences">Compétences</a>
-                <a href="#certification">Certification</a>
-                <a href="photo2.html">Contact</a>
-                
+                <a href="#certification">Certifications</a>
+                <a href="index2.html">Contact</a>
+                <a href="#reseaux">Mes réseaux</a>
             </nav>
         </div>
     </header>
@@ -39,33 +39,32 @@
                 </div>
             </div>
         </section>
-        <section id="linkedin">
-            <article class="project">
-                <div class="monreseau">
-                    <div id="cards">
-                        <div class="card">
-                            <div class="card-content">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <h2>Linkedin</h2>
-                                <p>Followers: <span>51</span></p>
-                                <a href="https://www.linkedin.com/in/nuno-de-caldas-gomes-906a9b229/">
-                                <i class="fa-solid fa-link"></i>
-                                <span>Follow me</span></a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <i class="fa-brands fa-github"></i>
-                                <h2>Github</h2>
-                                <p>Followers: <span>0</span></p>
-                                <a href="https://github.com/NunoDeCaldasGomes">
-                                <i class="fa-solid fa-link"></i>
-                                <span>Follow me</span></a>
-                            </div>
-                        </div>
+        <section id="reseaux" class="card" aria-labelledby="reseaux-title">
+            <h2 id="reseaux-title">Mes réseaux</h2>
+            <div class="social-cards">
+                <div class="social-card" aria-label="Profil LinkedIn">
+                    <div class="social-card-content">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Abonnés : <span>51</span></p>
+                        <a href="https://www.linkedin.com/in/nuno-de-caldas-gomes-906a9b229/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            <span>Profil</span>
+                        </a>
                     </div>
                 </div>
-            </article>
+                <div class="social-card" aria-label="Profil GitHub">
+                    <div class="social-card-content">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <h3>GitHub</h3>
+                        <p>Abonnés : <span>0</span></p>
+                        <a href="https://github.com/NunoDeCaldasGomes" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            <span>Profil</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="projets" class="card">
@@ -73,19 +72,19 @@
             <div class="projects-grid">
                 <article class="project">
                     <h3>Projet 1 — Mise en place d'un CV en ligne avec Github</h3>
-                    <p>Mise en ligne d'un projet du type d'un CV sur Github</p>
-                    <a href="https://nunodecaldasgomes.github.io/CV">Visualiser</a>
+                    <p>Mise en ligne d'un CV sur GitHub Pages.</p>
+                    <a href="https://nunodecaldasgomes.github.io/CV" target="_blank" rel="noopener noreferrer">Visualiser</a>
                 </article>
                 <article class="project">
-                    <h3>Projet 2 — Web Pages limited time</h3>
-                    <p>Mise en page de site web en temp limiter de 20 minutes</p>
-                    <a href="https://nunodecaldasgomes.github.io/arcosdevaldez.github.io/">Site n°1</a>
-                    <a href="https://nunodecaldasgomes.github.io/Enviropea/">Site n°2</a>
-                    <a href="https://nunodecaldasgomes.github.io/Gomes-SOCIETY/">Site n°3</a>
+                    <h3>Projet 2 — Pages web en temps limité</h3>
+                    <p>Mise en page de sites web en 20 minutes.</p>
+                    <a href="https://nunodecaldasgomes.github.io/arcosdevaldez.github.io/" target="_blank" rel="noopener noreferrer">Site n°1</a>
+                    <a href="https://nunodecaldasgomes.github.io/Enviropea/" target="_blank" rel="noopener noreferrer">Site n°2</a>
+                    <a href="https://nunodecaldasgomes.github.io/Gomes-SOCIETY/" target="_blank" rel="noopener noreferrer">Site n°3</a>
                 </article>
                 <article class="project">
                     <h3>Projet 3 - After work</h3>
-                    <p>Nous avons réaliser un after work avec mes camarades de classe.</p>
+                    <p>Organisation d'un afterwork avec mes camarades de classe.</p>
                     <a href="SOIREEAFTERWORK.gan" download>Télécharger le diagramme de Gantt (.gan)</a>
                 </article>
                 <!-- Ajoute ici d'autres projets -->
@@ -99,8 +98,8 @@
                     <li>Linux</li>
                     <li>VirtualBox</li>
                     <li>Windows Server</li>
-                    <li>Reseaux TCP/IP</li>
-                    <li>Reseaux ISO</li>
+                    <li>Réseaux TCP/IP</li>
+                    <li>Modèle OSI</li>
                 </ul>
             </article>
             <article class="competences">
@@ -108,13 +107,13 @@
                 <ul>
                     <li>VirtualBox</li>
                     <li>Kali Linux</li>
-                    <li>Ubutu</li>
+                    <li>Ubuntu</li>
                     <li>PowerShell</li>
-                    <li>Power Point</li>
+                    <li>PowerPoint</li>
                     <li>Excel</li>
                     <li>MySQL</li>
                     <li>Docker</li>
-                    <li>Github</li>
+                    <li>GitHub</li>
                     <li>Packet Tracer</li>
 
                 </ul>
@@ -133,23 +132,23 @@
                 </ul>
             </article>
             <article class="competences">
-                <h3>Securite Informatique</h3>
+                <h3>Sécurité informatique</h3>
                 <ul>
                     <li>Root Me</li>
                     <li>Kali</li>
                 </ul>
             </article>
             <article class="competences">
-                <h3>Reseaux</h3>
+                <h3>Réseaux</h3>
                 <ul>
                     <li>Cisco</li>
                 </ul>
             </article>
         </section>
-        <section id="competences" class="card">
-            <h2>Compétences Linguistiques et Transversalles</h2>
+        <section id="competences-transversales" class="card">
+            <h2>Compétences linguistiques et transversales</h2>
             <article class="competences">
-                <h3>Linguistiques</h3>
+                <h3>Langues</h3>
                 <ul>
                     <li>Anglais : Niveau B2 – usage courant</li>
                     <li>Portugais : Niveau C2 – bilingue</li>
@@ -157,38 +156,30 @@
                 </ul>
             </article>
             <article>
-                <h3>Transversalles</h3>
+                <h3>Transversales</h3>
                 <ul>
-                    <li>Travail Collectif</li>
+                    <li>Travail collectif</li>
                     <li>Autonomie</li>
-                    <li>Curiosite</li>
+                    <li>Curiosité</li>
                     <li>Rigueur</li>
                 </ul>
             </article>
             
         </section>
         <section id="certification" class="card">
-            <h2>Mes Certification</h2>
+            <h2>Mes certifications</h2>
             
             <article class="competences">
                 <h3>Introducing Packet Tracer</h3>
                 <embed src="certifpacket.pdf" type="application/pdf" class="pdf-viewer">
             </article>
-            <article class="competences">
-                <h3>Networking Basics</h3>
-                <embed src="networkingbasics.pdf" type="application/pdf" class="pdf-viewer">
-            </article>
-            <article class="competences"> 
-                <h3>Operating Systeme Basics</h3>
+            <article class="competences">   
+                <h3>Operating System Basics</h3>
                 <embed src="operatingsystembasics.pdf" type="application/pdf" class="pdf-viewer">
             </article>
             <article class="competences">   
                 <h3>Pix</h3>
                 <embed src="certifpix.pdf" type="application/pdf" class="pdf-viewer">
-            </article>
-            <article class="competences">
-                <h3>Introduction a la méthode EBIOS</h3>
-                <embed src="ebios.pdf" type="application/pdf" class="pdf-viewer">
             </article>
         </section>
         <section class="card cta">
@@ -203,10 +194,6 @@
             <p>&copy; <span id="year"></span> De Caldas Gomes Nuno Miguel — BTS SIO</p>
         </div>
     </footer>
+    <script defer src="animation.js"></script>
 </body>
 </html>
-
-
-
-
-

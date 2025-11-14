@@ -258,17 +258,18 @@ body{
 }
 
 .social-card-content {
-  position: absolute;
-  inset: 1px;
-  background-color: #131315;
-  border-radius: inherit;
-  padding: 16px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-}
+    position: absolute;
+    inset: 1px;
+    background-color: #131315;
+    border-radius: inherit;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    z-index: 3;
+  }
 
 .social-card:nth-child(1) { --color: 210 100% 50%; }
 .social-card:nth-child(2) { --color: 0 0% 100%; }
@@ -323,3 +324,4 @@ body{
 }
 
 .social-link:hover { opacity: 0.95; }
+

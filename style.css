@@ -130,7 +130,7 @@ body{
   background: transparent;
 }
 
-/* Ajuste la taille sur mobile */
+
 @media (max-width:640px){
   .about-grid{
     grid-template-columns:1fr;
@@ -147,20 +147,23 @@ body{
     height:300px;
   }
 }
- @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-  *,
-    *::after,
-    *::before {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 .monreseau{
   
+
+  
+
   body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #060606;
     display: grid;
     place-items: center;
     color: white;
@@ -233,34 +236,90 @@ body{
     all: unset;
     cursor: pointer;
   }
-  .card-content > i {
-  font-size: 10rem;
-  color: rgba(255, 255, 255, 0.5);
+
 }
 
-.card-content > p {
-  color: rgba(255, 255, 255, 0.5);
-}
 
-.card-content > a {
-  width: 90%;
-  padding-block: 0.8rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-
+.social-cards {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-card {
+  min-width: 220px;
+  height: 280px;
+  flex: 1 1 260px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card-content {
+  position: absolute;
+  inset: 1px;
+  background-color: #131315;
+  border-radius: inherit;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.social-card:nth-child(1) { --color: 210 100% 50%; }
+.social-card:nth-child(2) { --color: 0 0% 100%; }
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    420px circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--color) / 0.35),
+    transparent 40%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  z-index: 2;
+}
+
+.social-cards:hover > .social-card {
+  background: radial-gradient(
+    350px circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--color) / 1),
+    rgba(255, 255, 255, 0.12) 40%
+  );
+}
+
+.social-cards:hover > .social-card::before { opacity: 1; }
+
+.social-card-content i.fa-brands,
+.social-card-content i.fa-solid {
+  font-size: 28px;
+}
+
+.social-card-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.social-link {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  z-index: 10;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
 }
-.card-content > a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
-}
-
-
-
+.social-link:hover { opacity: 0.95; }

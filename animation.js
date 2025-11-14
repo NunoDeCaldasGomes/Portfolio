@@ -1,29 +1,20 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+  // Met à jour l'année dans le footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // simple fade-in for cards
-  document.querySelectorAll('.card').forEach((el, i) => {
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(8px)';
-    setTimeout(() => {
-      el.style.transition = 'opacity 400ms ease, transform 400ms ease';
-      el.style.opacity = 1;
-      el.style.transform = 'none';
-    }, 120 * i);
-  });
-});
-const cards = Array.from(document.querySelectorAll(".card"));
-const cardsContainer = document.querySelector("#cards");
-
-cardsContainer.addEventListener("mousemove", (e) => {
-  for (const card of cards) {
-    const rect = card.getBoundingClientRect();
-    x = e.clientX - rect.left;
-    y = e.clientY - rect.top;
-
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+  // Effet de survol pour les cartes sociales (calcul de la position de la souris)
+  const socialCardsContainer = document.querySelector('.social-cards');
+  const socialCards = document.querySelectorAll('.social-card');
+  if (socialCardsContainer && socialCards.length) {
+    socialCardsContainer.addEventListener('mousemove', (e) => {
+      socialCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
   }
 });

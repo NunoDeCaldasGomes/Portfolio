@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — De Caldas Gomes Nuno Miguel</title>
     <meta name="description" content="Portfolio BTS SIO SISR — Administration système, virtualisation, sécurité réseau et projets web de De Caldas Gomes Nuno Miguel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script defer src="animation.js"></script>
@@ -26,7 +29,17 @@
     </header>
 
     <main class="container">
-        <section id="apropos" class="card">
+        <section id="hero" class="hero card reveal" aria-label="Présentation">
+            <div class="hero-content">
+                <h2 class="hero-title">Administrateur systèmes & réseaux en devenir</h2>
+                <p class="hero-subtitle">BTS SIO — Option SISR. Passionné par la virtualisation, la sécurité et l’automatisation.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+                    <a class="btn btn-secondary" href="index2.html">Me contacter</a>
+                </div>
+            </div>
+        </section>
+        <section id="apropos" class="card reveal">
             <h2>À propos de moi</h2>
             <div class="about-grid">
                 <img src="photo2.png" alt="Photo de Nuno Miguel" class="profile">
@@ -39,18 +52,18 @@
                 </div>
             </div>
         </section>
-        <section id="reseaux" class="card" aria-labelledby="reseaux-title">
+        <section id="reseaux" class="card reveal" aria-labelledby="reseaux-title">
             <h2 id="reseaux-title">Mes réseaux</h2>
             <div class="social-cards">
                 <div class="social-card" aria-label="Profil LinkedIn">
                     <div class="social-card-content">
                         <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                         <h3>LinkedIn</h3>
-                        <p>Abonnés : <span>51</span></p>
+                        <p>Abonnés : <span>58</span></p>
                         <a href="https://www.linkedin.com/in/nuno-de-caldas-gomes-906a9b229/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-solid fa-link" aria-hidden="true"></i>
                             <span>Profil</span>
-                        </a>
+                        </a> 
                     </div>
                 </div>
                 <div class="social-card" aria-label="Profil GitHub">
@@ -67,7 +80,7 @@
             </div>
         </section>
 
-        <section id="projets" class="card">
+        <section id="projets" class="card reveal">
             <h2>Projets</h2>
             <div class="projects-grid">
                 <article class="project">
@@ -87,100 +100,99 @@
                     <p>Organisation d'un afterwork avec mes camarades de classe.</p>
                     <a href="SOIREEAFTERWORK.gan" download>Télécharger le diagramme de Gantt (.gan)</a>
                 </article>
-                <!-- Ajoute ici d'autres projets -->
             </div>
         </section>
-        <section id="competences" class="card">
+        <section id="competences" class="card reveal">
             <h2>Mes Compétences Techniques</h2>
             <article class="competences">
                 <h3>Infrastructures</h3>
-                <ul>
-                    <li>Linux</li>
-                    <li>VirtualBox</li>
-                    <li>Windows Server</li>
-                    <li>Réseaux TCP/IP</li>
-                    <li>Modèle OSI</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</span>
+                    <span class="chip"><i class="fa-solid fa-server" aria-hidden="true"></i> VirtualBox</span>
+                    <span class="chip"><i class="fa-brands fa-windows" aria-hidden="true"></i> Windows Server</span>
+                    <span class="chip"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Réseaux TCP/IP</span>
+                    <span class="chip"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Modèle OSI</span>
+                </div>
             </article>
             <article class="competences">
                 <h3>Outils</h3>
-                <ul>
-                    <li>VirtualBox</li>
-                    <li>Kali Linux</li>
-                    <li>Ubuntu</li>
-                    <li>PowerShell</li>
-                    <li>PowerPoint</li>
-                    <li>Excel</li>
-                    <li>MySQL</li>
-                    <li>Docker</li>
-                    <li>GitHub</li>
-                    <li>Packet Tracer</li>
-
-                </ul>
+                <div class="chips">
+                    <span class="chip"><i class="fa-solid fa-server" aria-hidden="true"></i> VirtualBox</span>
+                    <span class="chip"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Kali Linux</span>
+                    <span class="chip"><i class="fa-brands fa-ubuntu" aria-hidden="true"></i> Ubuntu</span>
+                    <span class="chip"><i class="fa-solid fa-terminal" aria-hidden="true"></i> PowerShell</span>
+                    <span class="chip"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i> PowerPoint</span>
+                    <span class="chip"><i class="fa-solid fa-file-excel" aria-hidden="true"></i> Excel</span>
+                    <span class="chip"><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</span>
+                    <span class="chip"><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</span>
+                    <span class="chip"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+                    <span class="chip"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Packet Tracer</span>
+                </div>
             </article>
             <article class="competences">
                 <h3>Langages</h3>
-                <ul>
-                    <li>Bash</li>
-                    <li>PowerShell</li>
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>SQL</li> 
-                    <li>PHP</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Bash</span>
+                    <span class="chip"><i class="fa-solid fa-terminal" aria-hidden="true"></i> PowerShell</span>
+                    <span class="chip"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                    <span class="chip"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML</span>
+                    <span class="chip"><i class="fa-brands fa-css3" aria-hidden="true"></i> CSS</span>
+                    <span class="chip"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                    <span class="chip"><i class="fa-solid fa-database" aria-hidden="true"></i> SQL</span>
+                    <span class="chip"><i class="fa-brands fa-php" aria-hidden="true"></i> PHP</span>
+                </div>
             </article>
             <article class="competences">
                 <h3>Sécurité informatique</h3>
-                <ul>
-                    <li>Root Me</li>
-                    <li>Kali</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip"><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Root Me</span>
+                    <span class="chip"><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Kali</span>
+                </div>
             </article>
             <article class="competences">
                 <h3>Réseaux</h3>
-                <ul>
-                    <li>Cisco</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Cisco</span>
+                </div>
             </article>
         </section>
-        <section id="competences-transversales" class="card">
+        <section id="competences-transversales" class="card reveal">
             <h2>Compétences linguistiques et transversales</h2>
             <article class="competences">
                 <h3>Langues</h3>
-                <ul>
-                    <li>Anglais : Niveau B2 – usage courant</li>
-                    <li>Portugais : Niveau C2 – bilingue</li>
-                    <li>Français : Langue maternelle</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip">Anglais (B2)</span>
+                    <span class="chip">Portugais (C2)</span>
+                    <span class="chip">Français (natif)</span>
+                </div>
             </article>
             <article>
                 <h3>Transversales</h3>
-                <ul>
-                    <li>Travail collectif</li>
-                    <li>Autonomie</li>
-                    <li>Curiosité</li>
-                    <li>Rigueur</li>
-                </ul>
+                <div class="chips">
+                    <span class="chip">Travail collectif</span>
+                    <span class="chip">Autonomie</span>
+                    <span class="chip">Curiosité</span>
+                    <span class="chip">Rigueur</span>
+                </div>
             </article>
             
         </section>
-        <section id="certification" class="card">
+        <section id="certification" class="card reveal">
             <h2>Mes certifications</h2>
-            
-            <article class="competences">
-                <h3>Introducing Packet Tracer</h3>
-                <embed src="certifpacket.pdf" type="application/pdf" class="pdf-viewer">
-            </article>
-            <article class="competences">   
-                <h3>Operating System Basics</h3>
-                <embed src="operatingsystembasics.pdf" type="application/pdf" class="pdf-viewer">
-            </article>
-            <article class="competences">   
-                <h3>Pix</h3>
-                <embed src="certifpix.pdf" type="application/pdf" class="pdf-viewer">
-            </article>
+            <div class="cert-grid">
+                <details class="cert-panel">
+                    <summary><i class="fa-solid fa-award" aria-hidden="true"></i> Introducing Packet Tracer</summary>
+                    <embed src="certifpacket.pdf" type="application/pdf" class="pdf-viewer" />
+                </details>
+                <details class="cert-panel">
+                    <summary><i class="fa-solid fa-award" aria-hidden="true"></i> Operating System Basics</summary>
+                    <embed src="operatingsystembasics.pdf" type="application/pdf" class="pdf-viewer" />
+                </details>
+                <details class="cert-panel">
+                    <summary><i class="fa-solid fa-award" aria-hidden="true"></i> Pix</summary>
+                    <embed src="certifpix.pdf" type="application/pdf" class="pdf-viewer" />
+                </details>
+            </div>
         </section>
         <section class="card cta">
             <h2>Envie d'échanger ?</h2>
@@ -197,3 +209,5 @@
     <script defer src="animation.js"></script>
 </body>
 </html>
+
+

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Met à jour l'année dans le footer
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Effet de survol pour les cartes sociales (calcul de la position de la souris)
+
   const socialCardsContainer = document.querySelector('.social-cards');
   const socialCards = document.querySelectorAll('.social-card');
   if (socialCardsContainer && socialCards.length) {
@@ -16,5 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.setProperty('--mouse-y', `${y}px`);
       });
     });
+  }
+
+
+  const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach((el) => io.observe(el));
   }
 });

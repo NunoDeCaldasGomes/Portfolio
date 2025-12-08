@@ -16,14 +16,15 @@
 
   <main class="container">
     <section class="card reveal">
-      <form action="#" method="post">
+      <form id="contactForm">
         <label for="nom">Nom</label><br>
-        <input id="nom" name="nom" type="text" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #dfe7ef"><br>
+        <input id="nom" name="nom" type="text" required><br>
         <label for="email">Email</label><br>
-        <input id="email" name="email" type="email" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #dfe7ef"><br>
+        <input id="email" name="email" type="email" required><br>
         <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="6" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #dfe7ef"></textarea><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br>
         <button class="btn" type="submit">Envoyer</button>
+        <div id="status" style="margin-top:10px;color:#2b6cb0"></div>
       </form>
     </section>
     <section class="card reveal">
@@ -40,8 +41,40 @@
   </footer>
 
   <script src="animation.js" defer></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      const nom = document.getElementById('nom').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      try {
+        const res = await fetch('/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nom, email, message })
+        });
+        if (res.ok) {
+          statusEl.textContent = 'Merci, votre message a été envoyé.';
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          statusEl.style.color = '#c53030';
+          statusEl.textContent = data.error || 'Une erreur est survenue, réessayez plus tard.';
+        }
+      } catch (err) {
+        const subject = encodeURIComponent(`Contact — ${nom}`);
+        const body = encodeURIComponent(`Nom: ${nom}\nEmail: ${email}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:nunodecaldasgomes@icloud.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
 </body>
 </html>
+
+
 
 
 

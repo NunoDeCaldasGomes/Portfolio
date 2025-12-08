@@ -47,10 +47,12 @@ body{
 .site-header nav a{color:#fff;
   text-decoration:none;
   margin-left:12px;
-  font-weight:600
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:8px
 }
 
-.site-header nav a:hover{opacity:0.9}
+.site-header nav a:hover{opacity:0.9;background:rgba(255,255,255,0.08)}
 
 .card{background:linear-gradient(180deg, var(--card) 0%, #0a0f1b 100%);
   border-radius:14px;
@@ -169,89 +171,7 @@ body{
     margin: 0;
     padding: 0;
   }
-.monreseau{
-  
 
-  
-
-  body {
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-    background-color: #060606;
-    display: grid;
-    place-items: center;
-    color: white;
-  }
-
-  #cards {
-    width: 70%;
-    padding-inline: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  .card {
-    min-width: 200px;
-    height: 350px;
-    flex: 1 1 250px;
-    background-color: rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    position: relative;
-  }
-
-  #cards:hover > .card {
-    background: radial-gradient(
-      400px circle at var(--mouse-x) var(--mouse-y),
-      hsl(var(--color) / 1),
-      rgba(255, 255, 255, 0.12) 40%
-    );
-  }
-
-  .card-content {
-    position: absolute;
-    inset: 1px;
-    background-color: #131315;
-    border-radius: inherit;
-  }
-
-  .card:nth-child(1) {
-    --color: 348 80% 60%;
-  }
-  .card:nth-child(2) {
-    --color: 0 0% 100%;
-  }
-  .card:nth-child(3) {
-    --color: 220 100% 35%;
-  }
-
-  .card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: radial-gradient(
-      500px circle at var(--mouse-x) var(--mouse-y),
-      hsl(var(--color) / 0.35),
-      transparent 40%
-    );
-    border-radius: inherit;
-    opacity: 0;
-    z-index: 2;
-  }
-
-  #cards:hover > .card::before {
-    opacity: 1;
-  }
-
-  a {
-    all: unset;
-    cursor: pointer;
-  }
-
-}
 
 /* Réseaux sociaux */
 .social-cards {
@@ -354,6 +274,26 @@ body{
 .hero-subtitle{color:var(--muted);margin:0 0 12px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 
+h2{font-size:1.5rem;margin:0 0 12px}
+h3{font-size:1.1rem;margin:0 0 8px}
+
+label{display:block;font-weight:600;margin-top:8px;color:var(--text)}
+input[type="text"],input[type="email"],textarea{
+  width:100%;
+  background:#0b1220;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;
+  color:#fff;
+  padding:12px 14px;
+  outline:none;
+  margin:6px 0;
+  transition:border .15s ease, box-shadow .15s ease
+}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(225,29,72,0.25)
+}
+
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .chip{
   background:#121a2b;
@@ -386,4 +326,6 @@ body{
 /* reveal animation */
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease, transform .35s ease}
 .reveal.visible{opacity:1;transform:none}
+
+
 
